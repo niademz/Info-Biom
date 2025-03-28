@@ -1,0 +1,329 @@
+/* app/chat/styles.css */
+
+.chat-page {
+    display: flex;
+    height: 85vh;
+    background-color: black; /* Set background color to black */
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 10px solid #000000; /* Optional: Add a bottom border */
+}
+
+.chat-header .avatar {
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 10px; /* Space between avatar and username */
+}
+
+.chat-header .user-username {
+    font-size: 1.4em; /* Adjust size as needed */
+    color: black; /* Set text color */
+}
+  
+.conversation-list {
+    width: 350px; /* Width for the sidebar */
+    background-color: #fffaf3; /* White background for the sidebar */
+    border-right: 1px solid #ddd; /* Border to separate sidebar */
+    padding: 10px;
+    overflow-y: auto; /* Scroll if conversations exceed height */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    margin-right: 20px; /* Space between conversation list and chat interface */
+    margin-left: 20px; /* Space between conversation list and chat interface */
+    margin-top: 10px;
+}
+  
+  .conversation-list ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+  }
+  
+  
+  .conversation-list li:hover {
+    background-color: #e0e0e0; /* Highlight on hover */
+  }
+  
+  .chat-interface {
+    flex: 1; /* Take remaining space */
+    display: flex;
+    flex-direction: column;
+    background-color: #fffaf3; /* White background for chat area */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    overflow: hidden; /* Prevent overflow */
+    margin-right: 20px; /* Space between conversation list and chat interface */
+    margin-top: 10px;
+}
+  
+.messages {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Take remaining space */
+    padding: 10px;
+    overflow-y: auto; /* Allow scrolling for messages */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #000000 transparent; /* For Firefox: thumb color and transparent track */
+}
+
+/* WebKit browsers (Chrome, Safari, etc.) */
+.messages::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+.messages::-webkit-scrollbar-track {
+    background: transparent; /* Make the track transparent */
+    border-radius: 60px; /* Rounded corners for the thumb */
+}
+
+.messages::-webkit-scrollbar-thumb {
+    background-color: #000000; /* Thumb color */
+    border-radius: 60px; /* Rounded corners for the thumb */
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+    background-color: #444444; /* Darker thumb color on hover */
+}
+
+/* Hide the scrollbar arrows */
+.messages::-webkit-scrollbar-button {
+    display: none; /* Hide the buttons */
+    width: 0px;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between messages */
+    word-wrap: break-word; /* Allow long words to break */
+    max-width: 45%; /* Prevent the message from being too wide */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.outgoing {
+    background-color: #000000; /* Color for outgoing messages */
+    color: #fffaf3; /* Text color for outgoing messages */
+    align-self: flex-end; /* Align outgoing messages to the right */
+}
+
+.incoming {
+    background-color: #000000; /* Color for incoming messages */
+    color: #fffaf3; /* Text color for incoming messages */
+    align-self: flex-start; /* Align incoming messages to the left */
+}
+  
+  .message-input {
+    display: flex;
+    padding: 10px;
+    border: none;
+}
+  
+  .message-input input {
+    flex: 1; /* Take remaining space */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: black;
+  }
+  
+  .message-input button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+  
+.message-input button:hover {
+    background-color: #353739; /* Darker blue on hover */
+}
+  
+.no-conversation {
+    flex: 1; /* Take remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center;
+    height: 100%; /* Center content vertically */
+    background-color: #fffaf3; /* White background for chat area */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    overflow: hidden; /* Prevent overflow */
+    margin-right: 20px; /* Space between conversation list and chat interface */
+    margin-top: 10px;
+}
+
+.start-conversation-button {
+    margin-top: 10px; /* Space between image and button */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #000000; /* Black background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size */
+}
+
+.start-conversation-button:hover {
+    background-color: #353739; /* Darker background on hover */
+}
+
+  .user-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .chat-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .user-username {
+    font-size: 1.5em; /* Adjust size as needed */
+    color: black; /* Set text color to black */
+    margin-bottom: 10px; /* Space below the username */
+    font-weight: 600;
+  }
+  
+  .username {
+    color: black; /* Set conversation username text color to black */
+  }
+
+  .divider {
+    border: none; /* Remove default border */
+    height: 1px; /* Set height for the divider */
+    background-color: #ddd; /* Set color for the divider */
+    margin: 10px 0; /* Add margin for spacing */
+  }
+
+  .last-message-time {
+    font-size: 0.8em; /* Smaller font size */
+    color: black; /* Set text color to black */
+    margin-left: 5px; /* Space between dot and time text */
+  }
+  
+  .dot {
+    color: black; /* Set dot color to black */
+    margin: 0 5px; /* Space around the dot */
+    font-size: 1em; /* Adjust size if needed */
+  }
+
+  /* app/chat/styles.css */
+
+/* app/chat/styles.css */
+
+.user-search-popup {
+  position: fixed; /* Fixed position to overlay on top */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  background-color: #fffaf3; /* White background for the popup */
+  border-radius: 20px; /* Rounded corners */
+  border-color: #000000;
+  border-width: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  width: 400px; /* Fixed width */
+  height: 400px; /* Fixed height */
+  display: flex;
+  flex-direction: column;
+  padding: 20px; /* Padding inside the box */
+  z-index: 1000; /* Ensure it appears above other content */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.user-search-popup input {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #fffaf3;
+  background-color: #000000;
+  margin-bottom: 10px; /* Space below the input */
+  width: 100%; /* Full width */
+}
+
+.user-search-popup ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+  height: 300px; /* Limit height for scrolling */
+  overflow-y: auto; /* Scroll if too many users */
+  width: 100%; /* Full width */
+}
+
+.user-search-popup li {
+  padding: 10px;
+  background-color: #fffaf3; /* White background for list items */
+  margin: 5px 0; /* Space between items */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: flex; /* Flexbox for avatar and username */
+  align-items: center; /* Center items vertically */
+  color: #000000;
+}
+
+.user-search-popup li img {
+  width: 30px; /* Avatar size */
+  height: 30px; /* Avatar size */
+  border-radius: 50%; /* Circular avatar */
+  margin-right: 10px; /* Space between avatar and username */
+}
+
+.user-search-popup li:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+
+.close-button {
+  margin-top: 10px; /* Space above the button */
+  padding: 10px 20px; /* Padding for the button */
+  background-color: #000000; /* Black background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.close-button:hover {
+  background-color: #353739; /* Darker background on hover */
+}
+
+.plus-button {
+  background: none; /* No background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-left: 10px; /* Space between username and button */
+}
+
+.plus-button:hover {
+  opacity: 0.7; /* Slightly fade on hover */
+}
+
+
+.messagecard {
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 10px; /* Space between messages */
+  padding-bottom: -10px;
+}
+
+.outgoingcard {
+  
+  align-self: flex-end; /* Align outgoing messages to the right */
+}
+
+.incomingcard {
+ 
+  align-self: flex-start; /* Align incoming messages to the left */
+}
+

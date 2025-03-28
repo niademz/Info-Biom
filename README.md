@@ -1,4 +1,4 @@
-# Info Biom
+# Info Biom (Still in Development)
 
 Info Biom is a dynamic news aggregator that provides users with curated daily recommendations across various platforms, including music, news, Reddit discussions, books, and YouTube videos. In addition to content aggregation, Info Biom integrates social features to enhance user interaction and personalization.
 
